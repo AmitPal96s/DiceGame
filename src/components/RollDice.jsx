@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import {media} from '../styled/hlo';
+
 
 const RollDice = ({
   rollDice,
@@ -38,5 +40,20 @@ const DiceContainer = styled.div`
 
   img:active {
     transform: scale(0.9);
+  }
+  @media ${media.tablet} {
+    img {
+      width: 120px;
+    }
+  }
+
+  @media ${media.mobile} {
+    img {
+      width: 100px;
+    }
+
+    p {
+      font-size: 1rem;
+    }
   }
 `;

@@ -6,6 +6,7 @@ import RollDice from './RollDice';
 import { Button } from '../styled/Buttons';
 import { OutlinedButton } from '../styled/Buttons';
 import Rules from './Rules';
+import {media} from '../styled/hlo';
 
 const GamePlay = () => {
   const [selectedNumber, setSelectedNumber] = useState(1);
@@ -99,12 +100,34 @@ const MainContainer = styled.main`
   .topsection {
     display: flex;
     justify-content: space-around;
-    align-items: end;
+    align-items: flex-end;
+    gap: 20px;
   }
-  .btns{
+
+  .btns {
     display: flex;
     flex-direction: column;
     gap: 12px;
     align-items: center;
+    margin-top: 20px;
+  }
+
+  /* Tablet screens */
+  @media ${media.tablet} {
+    .topsection {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  /* Mobile screens */
+  @media ${media.mobileL} {
+    padding: 40px 10px;
+
+    .btns button {
+      width: 90%;
+      max-width: 300px;
+    }
   }
 `;

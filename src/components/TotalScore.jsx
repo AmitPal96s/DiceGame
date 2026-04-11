@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import {media} from '../styled/hlo';
 
 const TotalScore = ({ totalScore }) => {
     return (
@@ -23,4 +23,19 @@ text-align: center;
     p{
         font-size: 24px;
     }
+    @media ${media.tablet} {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+  @media ${media.mobile} {
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
 `
